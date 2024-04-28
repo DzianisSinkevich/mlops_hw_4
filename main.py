@@ -59,21 +59,20 @@ def one_hot(df, column_names):
     # Применяем трансформацию .transform и сохраняем результат в Dataframe
     ohe_feat = ohe.transform(df[column_names])
     df_ohe = pd.DataFrame(ohe_feat, columns=ohe.get_feature_names_out()).astype(int)
-    print(df_ohe)
     return df_ohe
 
 
 def main():
-    # train, test = titanic()
+    # train, test = titanic()  # 1
     train, test = read_dfs()
 
-    # 1
-    train, test = anti_none(train, test)
-
     # 2
-    # train, test = sex_convert(train, test)
+    # train, test = anti_none(train, test)
 
     # 3
+    train, test = sex_convert(train, test)
+
+    # 4
     # train = pd.concat([train, one_hot(train, ['Sex'])], axis=1).reindex(train.index)
     # test = pd.concat([test, one_hot(test, ['Sex'])], axis=1).reindex(test.index)
 
