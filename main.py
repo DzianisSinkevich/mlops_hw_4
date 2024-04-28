@@ -70,11 +70,11 @@ def main():
     # train, test = anti_none(train, test)
 
     # 3
-    train, test = sex_convert(train, test)
+    # train, test = sex_convert(train, test)
 
     # 4
-    # train = pd.concat([train, one_hot(train, ['Sex'])], axis=1).reindex(train.index)
-    # test = pd.concat([test, one_hot(test, ['Sex'])], axis=1).reindex(test.index)
+    train = pd.concat([train, one_hot(train, ['Sex'])], axis=1).reindex(train.index)
+    test = pd.concat([test, one_hot(test, ['Sex'])], axis=1).reindex(test.index)
 
     save_dfs(train, test)
 
