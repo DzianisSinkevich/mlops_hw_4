@@ -64,8 +64,8 @@ def one_hot(df, column_names):
 
 
 def main():
-    # train, test = titanic()
-    train, test = read_dfs()
+    train, test = titanic()
+    # train, test = read_dfs()
 
     # 1
     # train, test = anti_none(train, test)
@@ -74,8 +74,8 @@ def main():
     # train, test = sex_convert(train, test)
 
     # 3
-    train = pd.concat([train, one_hot(train, ['Sex'])], axis=1).reindex(train.index)
-    test = pd.concat([test, one_hot(test, ['Sex'])], axis=1).reindex(test.index)
+    # train = pd.concat([train, one_hot(train, ['Sex'])], axis=1).reindex(train.index)
+    # test = pd.concat([test, one_hot(test, ['Sex'])], axis=1).reindex(test.index)
 
     save_dfs(train, test)
 
