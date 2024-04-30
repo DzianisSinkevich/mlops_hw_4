@@ -51,3 +51,4 @@ scripts/ci/gcp-creds.json
 .tox/
 htmlcov/
 /datasets
+/outputs
