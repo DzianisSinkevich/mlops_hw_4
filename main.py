@@ -64,10 +64,10 @@ def one_hot(df, column_names):
 
 def main():
     # train, test = titanic()  # 1
-    # train, test = read_dfs()
+    train, test = read_dfs()
 
     # 2
-    # train, test = anti_none(train, test)
+    train, test = anti_none(train, test)
 
     # 3
     # train, test = sex_convert(train, test)
