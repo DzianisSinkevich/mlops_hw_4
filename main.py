@@ -63,7 +63,7 @@ def one_hot(df, column_names):
 
 
 def main():
-    train, test = titanic()  # 1
+    # train, test = titanic()  # 1
     # train, test = read_dfs()
 
     # 2
